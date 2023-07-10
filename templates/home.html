@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>Bank Churn Prediction</title>
+  <style>
+    body {
+      background-color: beige;
+      text-align: center;
+    }
+    table {
+      border: 1px solid black;
+      margin: auto;
+    }
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Bank Churn Prediction</h1>
+    <form action="/predict" method="post">
+        <table>
+            <tr>
+                <td><label for="CreditScore">CreditScore of Customer</label></td>
+                <td><input type="text" name="CreditScore"></td>
+            </tr>
+            <tr>
+                <td><label for="Geography">Enter Customer's country</label></td>
+                <td>
+                  <select name="Geography">
+                    <option value="France">France</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Germany">Germany</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Gender">Select Gender</label></td>
+                <td>
+                  <select name="Gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Age">EntermAge</label></td>
+                <td><input type="text" name="Age"></td>
+            </tr>
+            <tr>
+                <td><label for="Tenure">Enter Tenure</label></td>
+                <td><input type="text" name="Tenure"></td>
+            </tr>
+            <tr>
+                <td><label for="Balance">Enter Account Balance</label></td>
+                <td><input type="text" name="Balance"></td>
+            </tr>
+            <tr>
+                <td><label for="NumOfProducts">Enter No of Product bought by customer</label></td>
+                <td><input type="text" name="NumOfProducts"></td>
+            </tr> 
+            <tr>
+                <td><label for="HasCrCard">Has Credit Card</label></td>
+                <td>
+                  <select name="HasCrCard">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="IsActiveMember">Is customer is active member</label></td>
+                <td>
+                  <select name="IsActiveMember">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="EstimatedSalary">Enter Estimated Salary of custmer</label></td>
+                <td><input type="text" name="EstimatedSalary"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                  <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        
+        <h2> {{ output }}</h2>
+    </form>
+</body>
+</html>
